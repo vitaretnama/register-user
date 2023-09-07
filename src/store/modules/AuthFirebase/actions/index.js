@@ -1,4 +1,3 @@
-// import { signIn, getUser, logOut } from "../../../../api";
 import axios from "axios";
 import router from "../../../../router";
 
