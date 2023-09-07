@@ -24,3 +24,12 @@ export const signInAction = async (context, { email, password }) => {
     return context.commit("failSignIn", error);
   }
 };
+
+export const logOutAction = async (context) => {
+  try {
+    context.commit("successLogout")
+    router.push("/")
+  } catch (error) {
+    context.commit("failLogout", error)
+  }
+}

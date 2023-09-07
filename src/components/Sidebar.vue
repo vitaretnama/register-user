@@ -2,6 +2,9 @@
 import { useStore } from 'vuex'
 import router from '../router'
 const store = useStore()
+const logOut = () => {
+  store.dispatch('logOutAction')
+}
 </script>
 
 <template>
@@ -37,6 +40,13 @@ const store = useStore()
             >
               <router-link to="/masteruser" class="px-10 flex space-x-4"
                 ><span class="pi pi-user"></span><span>Master User</span></router-link
+              >
+            </div>
+             <div
+              class="py-3 rounded-sm cursor-pointer text-gray-300 hover:text-white"
+            >
+              <button class="px-10 flex space-x-4" @click="logOut"
+                ><span class="pi pi-sign-out"></span><span>Log Out</span></button
               >
             </div>
           </div>
